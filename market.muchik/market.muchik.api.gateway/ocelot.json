@@ -1,0 +1,53 @@
+{
+  "Routes": [
+        {
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      },
+      "DownstreamPathTemplate": "/api/invoice/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "market.muchik.invoice.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/muchik/api/invoice/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    },
+       {
+      "DownstreamPathTemplate": "/api/security/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "market.muchik.security.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/muchik/api/security/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/pay/{everything_else}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "market.muchik.pay.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/muchik/api/pay/{everything_else}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "RouteClaimsRequirement": {
+        "Role": "admin"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://market.muchik.api.gateway"
+  }
+}

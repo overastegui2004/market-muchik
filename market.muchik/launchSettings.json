@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "market.muchik.api.gateway": "StartDebugging",
+        "market.muchik.invoice.api": "DoNotStart",
+        "market.muchik.pay.api": "StartDebugging",
+        "market.muchik.security.api": "DoNotStart"
+      }
+    }
+  }
+}

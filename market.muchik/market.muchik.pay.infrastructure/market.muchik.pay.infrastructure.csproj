@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.22" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.22">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.22">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+		<PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\market.muchik.domain\market.muchik.domain.csproj" />
+	  <ProjectReference Include="..\market.muchik.infrastructure.ioc\market.muchik.infrastructure.ioc.csproj" />
+	  <ProjectReference Include="..\market.muchik.pay.application\market.muchik.pay.application.csproj" />
+	  <ProjectReference Include="..\market.muchik.pay.domain\market.muchik.pay.domain.csproj" />
+	</ItemGroup>
+</Project>

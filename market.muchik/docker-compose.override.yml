@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+  market.muchik.invoice.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9203:80"
+  market.muchik.api.gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9500:80"
+  market.muchik.security.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9205:80"
+  market.muchik.pay.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=dev
+    ports:
+      - "9206:80"
